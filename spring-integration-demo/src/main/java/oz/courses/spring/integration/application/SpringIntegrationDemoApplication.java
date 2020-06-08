@@ -27,7 +27,7 @@ import org.springframework.messaging.support.GenericMessage;
 
 import oz.courses.spring.integration.ext.UppercasePersonService;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class SpringIntegrationDemoApplication {
 
 	public static void main(String[] args) {
