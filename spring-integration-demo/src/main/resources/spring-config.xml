@@ -8,14 +8,14 @@
 			http://www.springframework.org/schema/integration
 			https://www.springframework.org/schema/integration/spring-integration.xsd">
 
-	<channel id="inputChannel">
-<!-- 		<dispatcher /> -->
-		<queue />
-	</channel>
+	<channel id="inputChannel"/>
 
-	<service-activator input-channel="inputChannel">
+	<service-activator input-channel="inputChannel" output-channel="outputChannel">
 		<beans:bean id="helloService" class="oz.courses.spring.integration.ext.UppercasePersonService" />
-<!-- 		<poller ></poller> -->
 	</service-activator>
+	
+	<channel id="outputChannel"/>
+	
+	<logging-channel-adapter channel="outputChannel"/>
 
 </beans:beans>
